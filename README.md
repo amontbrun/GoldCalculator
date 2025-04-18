@@ -1,2 +1,2 @@
 # GoldCalculator
-calculadora de oro En linea
+Calculadora de valor de Oro con busqueda de Valor en linea

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precio del Oro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Cotización y Calculadora ORO</h2>
+        <h1 class="company-title">Valores Crisand™</h1>
+        <img src="Logo_Valores_Crisand.jpeg" alt="Valores Crisand Logo™" width="100" height="50">
+        <button id="refresh-button">Actualizar Cotización</button>
+        <p>Contactenos: +584122370080</p>
+        <div class="price-display">
+            <label for="base-price-gram">Precio Base (Oro 24k/999 por gramo):</label>
+            <span id="base-price-gram">Cargando...</span> USD
+        </div>
+        <div class="price-display">
+            <label for="base-price-ounce">Precio Base (Oro 24k/999 por onza troy):</label>
+            <span id="base-price-ounce">Cargando...</span> USD
+            <div class="ounce-reference">(1 Onza Troy ≈ 31.1035 gramos)</div>
+        </div>
+        <div class="timestamp">
+            Última actualización: <span id="timestamp">Cargando...</span>
+        </div>
+        <hr>
+        <h2>Precios Calculados por Pureza (por gramo):</h2>
+        <ul id="purity-prices">
+            <!-- Los precios se cargarán aquí -->
+        </ul>
+        <hr>
+        <h2>Calculadora</h2>
+        <div id="calculator">
+            <div class="form-group">
+                <label for="calc-purity">Pureza (Ley/Kilates):</label>
+                <select id="calc-purity">
+                    <!-- Opciones se cargarán dinámicamente -->
+                    <option value="">Seleccione...</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="calc-grams">Gramos:</label>
+                <input type="number" id="calc-grams" step="0.01" min="0" placeholder="Ej: 10.50">
+            </div>
+             <div class="form-group">
+                <label for="purchase-price">Precio de Compra:</label>
+                <input type="number" id="purchase-price" step="0.01" min="0" placeholder="Ej: 500.00">
+            </div>
+            <button id="calculate-button">Calcular</button>
+            <div id="calc-result">
+                Valor Estimado: <span id="calc-value">---</span> USD
+            </div>
+             <div class="form-group">
+                <label>Rendimiento:</label>
+                <div id="profit-result">
+                    Ganancia: <span id="profit-percent">---</span>%
+                    <br>
+                    Valor Neto: <span id="net-profit">---</span> USD
+                </div>
+            </div>
+        </div>
+
+        <hr>
+        <div id="api-stats">
+            <h2>Estadísticas de la API</h2>
+            <p>Cargando estadísticas...</p>
+        </div>
+        <p>© 2025 Valores Crisand™. Todos los derechos reservados.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
